@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>
+   Example | showSource
+  </title>
+  <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=entypo" type="text/css" />
+  <link rel="stylesheet" href="assets/css/middlefinger.css" type="text/css" />
+  <style type="text/css">
+<!--
+	@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+
+
+html, body { 
+  margin:0; 
+  overflow:hidden; 
+  min-height:100%; 
+}
+
+html { 
+  position:relative; 
+  padding:20px 0 0; 
+}
+
+body { 
+  position:absolute; 
+  height:100%; 
+  width:100%; 
+  background:#607D8B; 
+}
+
+h1 {
+  font: 600 3.8em/1 'Oswald', sans-serif;
+  color: rgba(0,0,0,.5);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  perspective: 100;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+  -ms-user-select: none;
+	user-select: none;
+  cursor: context-menu;
+}
+
+strong {
+  display: block;
+  position: absolute;
+  width: 100%;
+  line-height: 50px;
+  color: hsl(201,3%,18%);
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+strong:first-child { 
+  transform:rotateX(-110deg);
+  transform-origin:center bottom;
+  color:transparent;
+  user-select:none;
+  text-shadow:
+    0 0 1px hsla(201,3%,30%,.6),
+    0 -7px 10px hsla(201,3%,30%,.3);
+}
+
+h2 {
+    font: 600 1em/1 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+  	-webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+    cursor: context-menu;
+}
+h3{
+    font: 600 0.8em/1 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    position: absolute;
+    top: 42.5%;
+    width: 100%;
+  	-webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+    cursor: context-menu;
+}
+-->
+</style>
+ </head>
+ <body>
+ <h2>Replace the Browser's default</h2>
+ <h1 id="perspective">
+  <strong id="shadow">Context Menu</strong>
+  <strong>Context Menu</strong>
+ </h1>
+ <h3>Right click to view source code!</h3>
+ <ul class="menu" hidden>
+    <li class="item">
+        <a href="javascript:history.go(-1)">
+            <i class="pre entypo-left"></i>
+            Back
+			<span>bksp</span>
+        </a>
+    </li>
+    <li class="item item--disabled">
+        <a href="javascript:history.forward()">
+            <i class="pre entypo-right"></i>
+            Forward
+			<span>shf + bksp</span>
+        </a>
+    </li>
+    <li class="item">
+        <a href="javascript:window.location.reload(true)">
+            <i class="pre entypo-arrows-ccw"></i>
+            Reload
+			<span class="FKey">F5</span>
+        </a>
+    </li>
+ <li class="divider"></li>
+ <li class="item">
+  <a href="lounge/members">Lounge</a>
+  <i class="post entypo-right-open"></i>
+  <ul class="menu sublet" hidden>
+   <li class="item">
+    <a href="login">
+     <i class="pre entypo-login"> </i>
+     Log In
+    </a>
+   </li>
+   <li class="item">
+    <a href="login/join">
+     <i class="pre entypo-user-add"> </i>
+     Sign Up
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="divider"></li>
+ <li class="item">
+  <a href="http://softables.tk/">
+   <i class="pre entypo-home"></i>
+   Home
+  </a>
+ </li>
+ <li class="item">
+  <a href="http://softables.tk/rss.rss">
+   <i class="pre entypo-rss"></i>
+   RSS
+  </a>
+ </li>
+ <li class="item">
+  <a href="#">
+   <i class="pre entypo-users"></i>
+   Community
+  </a>
+ </li>
+ <li class="divider"></li>
+ <li class="item share">
+  <a>Share</a>
+  <i class="post entypo-right-open"></i>
+  <ul class="menu sublet" hidden>
+   <li class="item item--twitter">
+    <a href="http://twitter.com/share?text=Softables.tk%2F&amp;url=http%3A%2F%2Fsoftables.tk%2F" title="Twitter">
+     <i class="pre entypo-twitter"> </i>
+     Twitter
+    </a>
+   </li>
+   <li class="item item--facebook">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsoftables.tk%2F" title="Facebook">
+     <i class="pre entypo-facebook"> </i>
+     Facebook
+    </a>
+   </li>
+   <li class="item item--google">
+    <a href="https://plus.google.com/share?url=http%3A%2F%2Fsoftables.tk%2F" title="Google+">
+     <i class="pre entypo-gplus"></i>
+     Google+
+    </a>
+   </li>
+   <li class="item item--linkedin">
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fsoftables.tk%2F&amp;title=Depository&amp;source=Softables.tk%2F" title="LinkedIn">
+     <i class="pre entypo-linkedin"></i>
+     LinkedIn
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="divider"></li>
+	<li class="item item--print">
+     <a href="javascript:window.print()" title="Print">
+			<i class="pre entypo-print"></i> 
+			Print
+			<span>ctrl + p</span>
+		</a>
+	</li>
+	<li class="item item--source">
+    <a href="javascript:void(z=document.body.appendChild(document.createElement('script')));void(z.language='javascript');void(z.type='text/javascript');void(z.src='[[++site_url]]Source.php?p=' + location.href);" title="View Source">
+			<i class="pre entypo-code"></i> 
+			View Source			
+			<span>ctrl + u</span>
+		</a>
+	</li>
+</ul>
+</div>
+<script type="text/javascript" src="assets/js/middlefinger.js"></script>
+</body>
+</html>

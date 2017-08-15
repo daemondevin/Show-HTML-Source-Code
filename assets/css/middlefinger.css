@@ -1,0 +1,217 @@
+/**
+ * CSS file for middleFinger extra
+ *
+ * Copyright 2016 by demon.devin <demon.devin@gmail.com>
+ * Created on 12-03-2016
+ *
+ * @package middleFinger
+ */
+ 
+.menu {
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    color: #263238;
+    list-style: none;
+    margin: 0;
+    padding: 0.05em 0.25em;
+    border: 1px solid transparent;
+    border-right-color: #90A4AE;
+    border-top-color: #90a4ae;
+    border-bottom-color: #90A4AE;
+    border-radius: 3px;
+    position: absolute;
+    min-width: 175px;
+    z-index: 9999;
+    background: -webkit-linear-gradient(305deg, #B0BEC5, #607D8B);
+    background: linear-gradient(145deg, #B0BEC5, #607D8B);
+    box-shadow: 0 5px 20px -5px #263238;
+}
+.menu[hidden] {
+	display: block;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 0.3s, opacity 0.3s;
+}
+
+.move {
+	animation: move 0.3s;
+}
+@keyframes move {
+	0% { opacity: 0; }
+}
+
+.sublet {
+  background: linear-gradient(145deg, #B0BEC5, #607D8B);
+  width: auto;
+  min-width: 10em;
+  left: 100%;
+  top: -0.4em;
+  -webkit-transform: translateX(-0.7em);
+  transform: translateX(-0.7em);
+  -webkit-transition: opacity, width, min-width, visibility, -webkit-transform;
+  transition: opacity, width, min-width, visibility, -webkit-transform;
+  transition: transform, opacity, width, min-width, visibility;
+  transition: transform, opacity, width, min-width, visibility, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: 0.3s, 0.25s, 0.15s, 0.15s, 0.01s;
+  transition-duration: 0.3s, 0.25s, 0.15s, 0.15s, 0.01s;
+  -webkit-transition-delay: 0.3s, 0.25s, 0.3s, 0.3s, 0.35s;
+  transition-delay: 0.3s, 0.25s, 0.3s, 0.3s, 0.35s;
+  overflow: hidden;
+}
+
+.sublet .item {
+  padding-left: 2em;
+}
+
+.sublet i[class*="entypo-"] {
+  -webkit-transform: translateX(-2.25em);
+  transform: translateX(-2.25em);
+}
+
+.sublet.oppositeX {
+  right: 100%;
+  left: auto;
+  -webkit-transform: translateX(0.7em);
+  transform: translateX(0.7em);
+}
+
+.sublet.oppositeY {
+  top: auto;
+  bottom: -0.4em;
+}
+
+.header, .item {
+  padding-left: 2.5em;
+  padding-right: 1.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.35em;
+}
+
+.header, .divider {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  border-bottom: 1px solid rgba(38,50,56,0.3);
+}
+
+.header {
+  font-weight: 700;
+  padding-bottom: 0.5em;
+}
+
+.item {
+  border-radius: 3px;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.item:not(.item--disabled):hover {
+  background-color: rgba(38,50,56,.9);
+  color: #ECEFF1;
+  border: 1px solid rgba(38,50,56,0.3);
+}
+
+.item:not(.item--disabled):hover .sublet {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition-delay: 0.2s, 0.25s, 0.2s, 0.2s, 0s;
+  transition-delay: 0.2s, 0.25s, 0.2s, 0.2s, 0s;
+  border-radius: 0 3px 3px 3px;
+  visibility: visible;
+}
+
+.item:last-child {
+  margin-bottom: 0.25em;
+}
+
+.item:first-child {
+  margin-top: 0.25em;
+}
+
+.item--disabled {
+  color: rgba(38,50,56,0.3);
+}
+
+.item--active {
+  -webkit-animation: flash 0.5s ease 1;
+  animation: flash 0.5s ease 1;
+}
+
+.menu a {
+  cursor: default;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+span.close {
+	font-size: 10px;  
+	rgba(66, 66, 66, 0.75);
+}
+
+.item a span {
+	color: rgba(38,50,56,0.5);
+  float: right;
+  font-weight: normal;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-right: -15px;
+  font-size: 8px;
+  margin-top: 5px;
+}
+
+.item:not(.item--disabled):hover a span {
+  color: #ECEFF1;
+}
+
+.item:not(.item--disabled):hover .sublet a span {
+  color: #ECEFF1;
+}
+
+.menu [class*="entypo-"] {
+  font-style: normal;
+  position: absolute;
+  -webkit-transform: translateX(-2em);
+  transform: translateX(-2em);
+  width: 2em;
+  text-align: right;
+}
+
+.menu [class*="entypo-"].post {
+  -webkit-transform: translateY(-55%);
+  transform: translateY(-55%);
+  right: 0;
+  top: 50%;
+}
+
+.menu [class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  margin-right: 0.5em;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  20% {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes flash {
+  0% {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  20% {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
