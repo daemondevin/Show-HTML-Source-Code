@@ -21,10 +21,12 @@ The following is a list of demo content for your viewing pleasure. This way you 
  * [Softables.tk](http://softables.tk/) - Visit my website and right click to see this in action.
  
  ## Screenshots
-**Context Menu (Right Click) Screenshot**
+**Context Menu (Right Click) Screenshot** 
+
 ![Screenshot #1](https://www.phpclasses.org/browse/view/image/format/screenshot/file/145160/name/screenshot-01.png "Demo Screenshot 1") 
  
- **Generated Source Code Output Screenshot**
+ **Generated Source Code Output Screenshot** 
+ 
  ![Screenshot #2](https://www.phpclasses.org/browse/view/image/format/screenshot/file/145161/name/screenshot-02.png "Demo Screenshot 2")
   
 ## System Requirements
