@@ -1,4 +1,7 @@
 # Show HTML Source Code
+
+> **Show HTML Source Code** (a.k.a. **middleFinger**)
+
 This class can show highlighted HTML source of the current web page.
 
 It can generate highlighted HTML source code using PHP form the current page. It calls a script that will use the PHP class to retrieve the page HTML source and output it in a user-friendly fashion on the end-users web browser using JavaScript.
@@ -6,6 +9,7 @@ It can generate highlighted HTML source code using PHP form the current page. It
 This project also includes a replacement context menu (right click). This context menu also supports keyboard shortcuts using JavaScript keyboard event triggers.
 
 ## Features
+
 The following is a list of features this project comes packaged with.
  * CSS style-sheets for easy customization.
  * A replacement context menu to replace the browser's default right click menu.
@@ -15,21 +19,25 @@ The following is a list of features this project comes packaged with.
  * The output source code is also generated with line numbers.
  
 ## Demo Content
+
 The following is a list of demo content for your viewing pleasure. This way you can see what this package has before you download it.
  * [Context Menu (Right Click)](https://codepen.io/demondevin/pen/oYPGxb) - The right click menu looks similar to this.
  * [Code Block Snippet](https://codepen.io/demondevin/pen/pNqpQE) - The output source code looks similar to this.
  * [Softables.tk](http://softables.tk/) - Visit my website and right click to see this in action.
  
- ## Screenshots
-**Context Menu (Right Click) Screenshot** 
+## Screenshots
 
-![Screenshot #1](https://raw.githubusercontent.com/demondevin/Show-HTML-Source-Code/master/screenshots/screenshot-01.png "Demo Screenshot 1") 
+**Context Menu (Right Click) Screenshot:** 
+> ![Screenshot #1][S1]
  
- **Generated Source Code Output Screenshot** 
- 
- ![Screenshot #2](https://raw.githubusercontent.com/demondevin/Show-HTML-Source-Code/master/screenshots/screenshot-02.png "Demo Screenshot 2")
-  
+ **Generated Source Code Output Screenshot:** 
+> ![Screenshot #2][S2]
+
+[S1]: https://raw.githubusercontent.com/demondevin/Show-HTML-Source-Code/master/screenshots/screenshot-01.png "Right Click Menu"
+[S2]: https://raw.githubusercontent.com/demondevin/Show-HTML-Source-Code/master/screenshots/screenshot-02.png "Generated Source Code"
+
 ## System Requirements
+
 * PHP 5+ on UNIX, Mac OS X, or Windows with Apache server (or something similar).
 * Some CSS and HTML knowledge required for customizing.
 * PHP and JavaScript knowledge required for advance customization.
@@ -37,6 +45,7 @@ The following is a list of demo content for your viewing pleasure. This way you 
  [R1]: http://portableapps.com/download
 
 ## Awards
+
 The following is a few awards or acknowledgements this project has won.
 > _"Often Web developers want to take a look at Web pages source code but usually browsers show it in a way that it is hard to read. This class provides means to show the current page source code by highlighting the tags and data."_ 
 >
@@ -44,5 +53,6 @@ The following is a few awards or acknowledgements this project has won.
 > * [Innovation Award](https://www.phpclasses.org/package/10347-PHP-Show-highlighted-HTML-source-of-the-current-page.html) - Nominated for an Innovation Award at [PHPClasses.org](https://www.phpclasses.org/) and won 2nd place on June 2017.
    
 ## License
+
 * This project and the code therein is released under the [GNU GPL-3.0](https://opensource.org/licenses/GPL-3.0).
  
