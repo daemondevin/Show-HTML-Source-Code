@@ -23,11 +23,11 @@ The following is a list of demo content for your viewing pleasure. This way you 
  ## Screenshots
 **Context Menu (Right Click) Screenshot** 
 
-![Screenshot #1](https://www.phpclasses.org/browse/view/image/format/screenshot/file/145160/name/screenshot-01.png "Demo Screenshot 1") 
+![Screenshot #1](https://raw.githubusercontent.com/demondevin/Show-HTML-Source-Code/master/screenshots/screenshot-01.png "Demo Screenshot 1") 
  
  **Generated Source Code Output Screenshot** 
  
- ![Screenshot #2](https://www.phpclasses.org/browse/view/image/format/screenshot/file/145161/name/screenshot-02.png "Demo Screenshot 2")
+ ![Screenshot #2](https://raw.githubusercontent.com/demondevin/Show-HTML-Source-Code/master/screenshots/screenshot-02.png "Demo Screenshot 2")
   
 ## System Requirements
 * PHP 5+ on UNIX, Mac OS X, or Windows with Apache server (or something similar).
