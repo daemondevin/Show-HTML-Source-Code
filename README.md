@@ -22,7 +22,7 @@ The following is a list of demo content for your viewing pleasure. This way you 
  
  ## Screenshots
 **Context Menu (Right Click) Screenshot**
- ![Screenshot #1](https://www.phpclasses.org/browse/view/image/format/screenshot/file/145160/name/screenshot-01.png "Demo Screenshot 1") 
+![Screenshot #1](https://www.phpclasses.org/browse/view/image/format/screenshot/file/145160/name/screenshot-01.png "Demo Screenshot 1") 
  
  **Generated Source Code Output Screenshot**
  ![Screenshot #2](https://www.phpclasses.org/browse/view/image/format/screenshot/file/145161/name/screenshot-02.png "Demo Screenshot 2")
@@ -36,7 +36,8 @@ The following is a list of demo content for your viewing pleasure. This way you 
 
 ## Awards
 The following is a few awards or acknowledgements this project has won.
-> _"Often Web developers want to take a look at Web pages source code but usually browsers show it in a way that it is hard to read. This class provides means to show the current page source code by highlighting the tags and data."_
+> _"Often Web developers want to take a look at Web pages source code but usually browsers show it in a way that it is hard to read. This class provides means to show the current page source code by highlighting the tags and data."_ 
+>
 > -**Manuel Lemos** (PHPClasses.org Founder/Webmaster)
 > * [Innovation Award](https://www.phpclasses.org/package/10347-PHP-Show-highlighted-HTML-source-of-the-current-page.html) - Nominated for an Innovation Award at [PHPClasses.org](https://www.phpclasses.org/) and won 2nd place on June 2017.
    
