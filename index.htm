@@ -1,227 +1,295 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
  <head>
-  <meta charset="UTF-8" />
-  <title>
-   Example | showSource (a.k.a. middleFinger)
-  </title>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="assets/css/middlefinger.css" type="text/css" />
-  <style type="text/css">
-	<!--
-	@import url(//fonts.googleapis.com/css?family=Oswald:700);
-
-	html, body { 
-	  margin:0; 
-	  overflow:hidden; 
-	  min-height:100%; 
-	}
-
-	html { 
-	  position:relative; 
-	  padding:20px 0 0; 
-	}
-
-	body { 
-	  position:absolute; 
-	  height:100%; 
-	  width:100%; 
-	  background:#607D8B; 
-	}
-
-	h1 {
-	  font: 600 3.8em/1 'Oswald', sans-serif;
-	  color: rgba(0,0,0,.5);
-	  text-align: center;
-	  text-transform: uppercase;
-	  letter-spacing: .3em;
-	  position: absolute;
-	  top: 25%;
-	  width: 100%;
-	  perspective: 100;
-	  -webkit-user-select: none;
-		-moz-user-select: none;
-	  -ms-user-select: none;
-		user-select: none;
-	  cursor: context-menu;
-	}
-
-	strong {
-	  display: block;
-	  position: absolute;
-	  width: 100%;
-	  line-height: 50px;
-	  color: hsl(201,3%,18%);
-	  -webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-
-	strong:first-child { 
-	  transform:rotateX(-110deg);
-	  transform-origin:center bottom;
-	  color:transparent;
-	  user-select:none;
-	  text-shadow:
-		0 0 1px hsla(201,3%,30%,.6),
-		0 -7px 10px hsla(201,3%,30%,.3);
-	}
-
-	h2 {
-		font: 600 1em/1 'Raleway', sans-serif;
-		color: rgba(0,0,0,.5);
-		text-align: center;
-		text-transform: uppercase;
-		letter-spacing: .5em;
-		position: absolute;
-		top: 25%;
-		width: 100%;
-		-webkit-user-select: none;
-		  -moz-user-select: none;
-		  -ms-user-select: none;
-		  user-select: none;
-		cursor: context-menu;
-	}
-	h3{
-		font: 600 0.8em/1 'Raleway', sans-serif;
-		color: rgba(0,0,0,.5);
-		text-align: center;
-		text-transform: uppercase;
-		letter-spacing: .5em;
-		position: absolute;
-		top: 42.5%;
-		width: 100%;
-		-webkit-user-select: none;
-		  -moz-user-select: none;
-		  -ms-user-select: none;
-		  user-select: none;
-		cursor: context-menu;
-	}
-	-->
+  <title>showSource Example Page</title>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css' />
+  <link rel="stylesheet" href="assets/css/middleFinger.css" type="text/css" />
+  <style>
+   h1 {
+   font: 600 3.8em/1 'Oswald', sans-serif; color: rgba(0,0,0,.5); text-transform: uppercase; letter-spacing: .3em; position: relative; perspective: 100; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: context-menu; }
+   strong {
+   display: block; position: absolute; width: 100%; line-height: 50px; color: hsl(201,3%,18%); -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+   strong:first-child {
+   transform:rotateX(-110deg); transform-origin:center bottom; color:transparent; user-select:none; text-shadow: 0 0 1px hsla(201,3%,30%,.6), 0 -7px 10px hsla(201,3%,30%,.3); }
+   h2 {
+   font-size: 20px; font-weight: 600; font-family: 'Raleway', sans-serif; text-transform: uppercase; color: rgba(0,0,0,.75); font-weight:bolder; text-transform: uppercase; letter-spacing: .5em; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: context-menu; }
+   h3{ font-size:16px; font-weight: 600; font-family:'Raleway', sans-serif; color: rgba(0,0,0,.75); font-weight:bolder; text-transform: uppercase; line-height: 25px; letter-spacing: .2em; width: 100%; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: context-menu; }
+   #mSourceWindow {
+   text-align:left; z-index:10; position:absolute; top:0; left:0; background: rgb(22,22,22); background: rgba(22,22,22,0.95); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: monospace; color: #9E9E9E; font-style: normal; font-variant: normal; font-weight: 400; line-height: 11px; letter-spacing: 1.5px; }
+   a.mBtn{ display: block; color: #9E9E9E; font-size: 18px; margin-top: 3px; text-decoration: none; float: right; margin-right: 8px; }
+   .variable {
+   color: #616161; }
+   .variable2 {
+   color: #607d8b; }
+   .keyword {
+   color: #6d4c41; }
+   .constant {
+   color: #9e9e9e; }
+   .docComment {
+   color: #0d47a1; }
+   .operator {
+   color: #ff8a65; }
+   .comment {
+   color: #33691e; }
+   .string {
+   color: #f39c12; font-weight:bold; }
+   .text {
+   color:#000000; }
+   .tag {
+   color:#6d4c41; }
+   .attribute {
+   color:#607d8b; }
+   .value {
+   color:#616161; }
+   table {
+   font-family: 'Lato', sans-serif; font-size: 12px; position: fixed; bottom: 25px; left: 25px; border-collapse: collapse; }
+   table, td {
+   border: 1px dotted rgba(158, 158, 158, 0.25); background-color: rgba(158, 158, 158, 0.15); }
+   th {
+   padding: 5px; text-align: left; font-size:14px; text-transform: uppercase; font-weight: 600; background-color: rgba(158, 158, 158, 0.25); }
+   td {
+   font-weight: 400; padding-left: 5px; padding-right: 5px; }
+   table code {
+   font-family: monospace; font-size: 90%; background-color: rgba(169, 169, 169, 0.5); padding: 0 5px 0 5px; }
+   table [class*="fa-"] {
+   font-size: 14px; font-family: "FontAwesome"; font-style: unset; color: #2c2e2f; padding-left: 2px; }
+   span.key {
+   border-radius: 3px; border: 1px solid #b4b4b4; box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 2px 0 0 rgba(255,255,255,.7) inset; display: inline-block; font-family: "Consolas",courier,monospace; text-transform:uppercase; font-variant: small-caps; font-size: .9em; font-weight: 700; line-height: 1; padding: 2px 4px; white-space: nowrap; }
+   span.key i.fa.fa-arrow-left, span.key i.fa.fa-arrow-right, span.key i.fa.fa-arrow-up, span.key i.fa.fa-arrow-down {
+   font-size:9px; }
+   span.key i.fa.fa-list-alt {
+   font-size:14px; }
+   h3 span.key {
+   font-variant: small-caps; font-size:12px; }
+   .wrapper {
+   display: block; position: fixed; top: 10%; text-align: right; width: 50%; left: 50%; background-color: rgba(158, 158, 158, 0.15); border-radius:10px; }
+   div.content h3 {
+   font-size:14px; text-align:right; text-transform:capitalize; }
   </style>
+  <script>var href = location.protocol + '//' + location.hostname + '/Source.php?p=' + location.href;</script>
  </head>
  <body>
-<h2>Replace the Browser's default</h2>
-<h1 id="perspective">
-  <strong id="shadow">Context Menu</strong>
-  <strong>Context Menu</strong>
-</h1>
+  <div class="wrapper">
+   <h2>Replace the Browser's default</h2>
+   <h1 id="perspective">
+    <strong id="shadow">Context Menu</strong>
+    <strong>Context Menu</strong>
+   </h1>
+   <br /><br /><br />
+   <h3>Right Click on this Page for the Context Menu!</h3>
+   <h3>Press <code>Ctrl+U</code> to View The Source Code of this Page!</h3></div>
+  <table>
+<thead>
+<tr>
+  <th>Key</th>
+  <th align="center">Keyboard Shortcuts</th>
+  <th>Keyboard Event Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><i class="fa fa-arrow-circle-left fa-fw"></i> <code>Backspace</code></td>
+  <td align="center"><span class="key">Bksp</span> <code>OR</code> <span class="key">Alt</span> <code>+</code> <span class="key"><i class="fa fa-arrow-left">&nbsp;</i></span></td>
+  <td>Goes back one page in the browser history.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-arrow-circle-right fa-fw"></i> <code>Shift+Backspace</code></td>
+  <td align="center"><span class="key">Shift</span> <code>+</code> <span class="key">Bksp</span> <code>OR</code> <span class="key">Alt</span> <code>+</code> <span class="key"><i class="fa fa-arrow-right">&nbsp;</i></span></td>
+  <td>Goes forward one page in the browser history.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-refresh fa-fw"></i> <code>F5</code></td>
+  <td align="center"><span class="key">F5</span> <code>OR</code> <span class="key">Ctrl</span> <code>+</code> <span class="key">R</span></td>
+  <td>Refreshes the current page.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-print fa-fw"></i> <code>Control+P</code></td>
+  <td align="center">Opens the Print Page dialogue screen.</td>
+  <td></td>
+</tr>
+<tr>
+  <td><i class="fa fa-file-code-o fa-fw"></i> <code>Control+U</code></td>
+  <td align="center"><span class="key">Ctrl</span> <code>+</code> U</td>
+  <td>Views the source code of the current page.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-window-close fa-fw"></i> <code>Control+X</code></td>
+  <td align="center"><span class="key">Ctrl</span> <code>+</code> X</td>
+  <td>Closes the source code window element.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-long-arrow-up fa-fw"></i> <code>Home</code></td>
+  <td align="center"><span class="key">Home</span></td>
+  <td>Scrolls to the top of the page.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-long-arrow-down fa-fw"></i> <code>End</code></td>
+  <td align="center"><span class="key">End</span></td>
+  <td>Jumps to the bottom of the page.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-long-arrow-up fa-fw"></i> <code>ArrowUp</code></td>
+  <td align="center"><span class="key"><i class="fa fa-arrow-up">&nbsp;</i></span></td>
+  <td>Scrolls the page up a little bit.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-long-arrow-down fa-fw"></i> <code>ArrowDown</code></td>
+  <td align="center"><span class="key"><i class="fa fa-arrow-down">&nbsp;</i></span></td>
+  <td>Scrolls the page down a little bit.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-long-arrow-up fa-fw"></i> <code>PageUp</code></td>
+  <td align="center"><span class="key">PgUp</span></td>
+  <td>Scrolls the page up a lot more.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-long-arrow-down fa-fw"></i> <code>PageDown</code></td>
+  <td align="center"><span class="key">PgDn</span></td>
+  <td>Scrolls the page down a lot more.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-list-alt fa-fw"></i> <code>ContextMenu</code></td>
+  <td align="center"><span class="key"><i class="fa fa-list-alt">&nbsp;</i></span></td>
+  <td>Opens and/or closes the context menu element.</td>
+</tr>
+<tr>
+  <td><i class="fa fa-square fa-fw"></i> <code>Escape</code></td>
+  <td align="center"><span class="key">Esc</span></td>
+  <td>Closes the context menu element if it's visible.</td>
+</tr>
+</tbody>
+</table>
 
-<ul id="menu" class="menu" hidden>
-    <li class="item">
-        <a href="javascript:window.history.go(-1)">
-            <i class="fa-arrow-left"></i>
-            Back
-          <span>bksp</span>
-        </a>
-    </li>
-    <li class="item item--disabled">
-        <a href="javascript:window.history.go(1)">
-            <i class="fa-arrow-right"></i>
-            Forward
-            <span>shf + bksp</span>
-        </a>
-    </li>
-    <li class="item">
-        <a href="javascript:window.location.reload(true)">
-            <i class="fa-refresh"></i>
-            Reload
-          <span>alt + <small>F5</small></span>
-        </a>
-    </li>
-    <li class="divider"></li>
-    <li class="item">
-    <a>Profile</a>
-      <i class="post fa-angle-right"></i>
-    <ul class="menu sublet" hidden>
-      <li class="item">
-        <a href="#">
-            <i class="fa-inbox"> </i>
-            Inbox
-        </a>
-      </li>
-      <li class="item">
-        <a href="#">
-          <i class="fa-user"> </i>
-          View Profile
-        </a>
-      </li>
-      <li class="item">
-        <a href="#">
-            <i class="fa-pencil"> </i>
-            Edit Profile
-        </a>
-      </li>
-      <li class="item">
-        <a href="#">
-            <i class="fa-cog"> </i>
-            Preferences
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li class="divider"></li>
-  <li class="item">
-        <a href="#">
-            <i class="fa-home"></i>
-            Home
-        </a>
-    </li>
-    <li class="item">
-        <a href="#">
-            <i class="fa-rss"></i>
-            RSS
-        </a>
-    </li>
-    <li class="item">
-        <a href="#">
-            <i class="fa-users"></i>
-            Community
-        </a>
-    </li>
-  <li class="divider"></li>
-  <li class="item share">
-      <a>Share</a>
-      <i class="post fa-angle-right"></i>
-  <ul class="menu sublet" hidden>
+  <ul id="menu" class="menu" hidden>
    <li class="item">
+    <a href="javascript:window.history.go(-1)">
+     <i class="fa-arrow-left"></i>
+     Back
+     <span>bksp</span>
+    </a>
+   </li>
+   <li class="item item--disabled">
+    <a href="javascript:window.history.go(1)">
+     <i class="fa-arrow-right"></i>
+     Forward
+     <span>shf + bksp</span>
+    </a>
+   </li>
+   <li class="item">
+    <a href="javascript:window.location.reload(true)">
+     <i class="fa-refresh"></i>
+     Reload
+     <span>F5</span>
+    </a>
+   </li>
+   <li class="divider"></li>
+   <li class="item">
+    <a>Profile</a>
+    <i class="post fa-angle-right"></i>
+    <ul class="menu sublet" hidden>
+     <li class="item">
+      <a href="#">
+       <i class="fa-inbox"> </i>
+       Inbox
+      </a>
+     </li>
+     <li class="item">
+      <a href="#">
+       <i class="fa-user"> </i>
+       View Profile
+      </a>
+     </li>
+     <li class="item">
+      <a href="#">
+       <i class="fa-pencil"> </i>
+       Edit Profile
+      </a>
+     </li>
+     <li class="item">
+      <a href="#">
+       <i class="fa-cog"> </i>
+       Preferences
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="divider"></li>
+   <li class="item">
+    <a href="javascript:window.location.assign(location.hostname)">
+     <i class="fa-home"></i>
+     Home
+    </a>
+   </li>
+   <li class="item">
+    <a href="#">
+     <i class="fa-rss"></i>
+     RSS
+    </a>
+   </li>
+   <li class="item">
+    <a href="#">
+     <i class="fa-users"></i>
+     Community
+    </a>
+   </li>
+   <li class="divider"></li>
+   <li class="item share">
+    <a>Share</a>
+    <i class="post fa-angle-right"></i>
+    <ul class="menu sublet" hidden>
+     <li class="item">
       <a class="link" href="javascript:window.location.assign('https://www.facebook.com/sharer/sharer.php?u=' + location.href)" target="_blank" title="Facebook">
        <i class="fa-facebook"> </i>
        Facebook
       </a>
-  </li>
-  <li class="item">
-    <a class="link" href="javascript:window.location.assign('https://twitter.com/share?url=' + location.href)" target="_blank" title="Twitter">
-      <i class="fa-twitter"> </i>
-      Twitter
-    </a>
-  </li>
-    <li class="item">
-      <a class="link" href="javascript:window.location.assign('https://plus.google.com/share?url=' + location.href)" target="_blank" title="Google+">
-        <i class="fa-google-plus-square"></i>
-        Google+
+     </li>
+     <li class="item">
+      <a class="link" href="javascript:window.location.assign('https://twitter.com/share?url=' + location.href)" target="_blank" title="Twitter">
+       <i class="fa-twitter"> </i>
+       Twitter
       </a>
-    </li>
-  </ul>
-  </li>
-  <li class="divider"></li>
-  <li class="item">
+     </li>
+     <li class="item">
+      <a class="link" href="javascript:window.location.assign('https://plus.google.com/share?url=' + location.href)" target="_blank" title="Google+">
+       <i class="fa-google-plus-square"></i>
+       Google+
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="divider"></li>
+   <li class="item">
     <a href="javascript:window.print()" title="Print">
-      <i class="fa-print"></i> 
-      Print
-      <span>ctrl + p</span>
+     <i class="fa-print"></i>
+     Print
+     <span>ctrl + p</span>
     </a>
-  </li>
-  <li class="item">
-    <a href="javascript:void(z=document.body.appendChild(document.createElement('script')));void(z.language='javascript');void(z.type='text/javascript');void(z.src='[[++site_url]]Source.php?p=' + location.href);" title="View Source">
-      <i class="fa-code"></i> 
-      View Source			
-      <span>ctrl + u</span>
+   </li>
+   <li class="item">
+    <a href="javascript:void(z=document.body.appendChild(document.createElement('script')));void(z.language='javascript');void(z.type='text/javascript');void(z.src=href);" title="View Source">
+     <i class="fa-code"></i>
+     View Source
+     <span>ctrl + u</span>
     </a>
-  </li>
-</ul>
-</div>
-<script type="text/javascript" src="assets/js/middlefinger.js"></script>
-</body>
+   </li>
+  </ul>
+  <div class="content">
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <h3>Top of Page</h3>
+   <h3>Hit the <span class="key">End</span> key to jump to the bottom of the page!</h3>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <h3>Hit the <span class="key">Home</span> key to scroll back up!</h3>
+   <h3>Bottom of Page</h3>
+   <br/><br/><br/><br/>
+   <h3>Created, Designed, and Coded by demon.devin</h3>
+  </div>
+  <script src="assets/js/middlefinger.js"></script>
+ </body>
 </html>
