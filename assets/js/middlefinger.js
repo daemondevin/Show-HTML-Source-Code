@@ -1,7 +1,7 @@
 /**
  * JavaScript file for the MODX middleFinger extra
  *
- * Copyright 2016 by demon.devin <demon.devin@gmail.com>
+ * Copyright 2017 by demon.devin <demon.devin@gmail.com>
  * Created on 12-03-2016
  *
  * middleFinger is free software; you can redistribute it and/or modify it under the
@@ -40,6 +40,18 @@ function ctxMenuClose() {
 	ctxMenuOpen = false;
 }
 
+function scrollTo(element, to, duration) {
+  if (duration <= 0) return;
+  var difference = to - element.scrollTop;
+  var perTick = difference / duration * 10;
+
+  setTimeout(function() {
+    element.scrollTop = element.scrollTop + perTick;
+    if (element.scrollTop == to) return;
+    scrollTo(element, to, duration - 10);
+  }, 10);
+}
+
 document.addEventListener('contextmenu', function (e) {
 
 	if (ctxMenuOpen)
@@ -74,15 +86,34 @@ document.addEventListener('keydown', function (event) {
 			ctxMenuClose();
 			break;
 		case "Home":
-			window.location.assign('http://' + location.host + '/');
+			scrollTo(document.body, 0, 600);
+			break;
+		case "End":
+			document.body.scrollTop = document.body.scrollHeight;
+			break;
+		case "ArrowUp":
+			window.scrollBy(0, -50);
+			break;
+		case "ArrowDown":
+			window.scrollBy(0, 50);
+			break;
+		case "PageUp":
+			window.scrollBy(0, -250);
+			break;
+		case "PageDown":
+			window.scrollBy(0, 250);
 			break;
 		case "F5":
-		case "F5":
+		case "ControlLeft" && "KeyR":
+		case "ControlRight" && "KeyR":
 			window.location.reload(true);
 			break;
 		case "Backspace":
+		case "Alt" && "ArrowLeft":
+		case "GoBack":
 			window.history.go(-1);
 			break;
+		case "Alt" && "ArrowRight":
 		case "ShiftLeft" && "Backspace":
 		case "ShiftRight" && "Backspace":
 			window.history.forward();
@@ -90,7 +121,7 @@ document.addEventListener('keydown', function (event) {
 		case "ControlLeft" && "KeyU":
 		case "ControlRight" && "KeyU":
 			var z;
-			var viewSourceLink = void(z = document.body.appendChild(document.createElement('script')));void(z.language = 'javascript');void(z.type = 'text/javascript');void(z.src = '/Source.php?p=' + location.href);
+			var viewSourceLink = void(z = document.body.appendChild(document.createElement('script')));void(z.language = 'javascript');void(z.type = 'text/javascript');void(z.src = 'http://softables.tk/showSource.php?p=' + location.href);
 			window.location.assign('javascript:' + viewSourceLink);
 			break;
 		}
@@ -99,13 +130,35 @@ document.addEventListener('keydown', function (event) {
 		case "ContextMenu":
 			ctxMenuOpen();
 			break;
+		case "Home":
+			scrollTo(document.body, 0, 600);
+			break;
+		case "End":
+			document.body.scrollTop = document.body.scrollHeight;
+			break;
+		case "ArrowUp":
+			window.scrollBy(0, -50);
+			break;
+		case "ArrowDown":
+			window.scrollBy(0, 50);
+			break;
+		case "PageUp":
+			window.scrollBy(0, -250);
+			break;
+		case "PageDown":
+			window.scrollBy(0, 250);
+			break;
 		case "F5":
-		case "F5":
+		case "ControlLeft" && "KeyR":
+		case "ControlRight" && "KeyR":
 			window.location.reload(true);
 			break;
 		case "Backspace":
+		case "Alt" && "ArrowLeft":
+		case "GoBack":
 			window.history.go(-1);
 			break;
+		case "Alt" && "ArrowRight":
 		case "ShiftLeft" && "Backspace":
 		case "ShiftRight" && "Backspace":
 			window.history.forward();
@@ -113,7 +166,7 @@ document.addEventListener('keydown', function (event) {
 		case "ControlLeft" && "KeyU":
 		case "ControlRight" && "KeyU":
 			var z;
-			var viewSourceLink = void(z = document.body.appendChild(document.createElement('script')));void(z.language = 'javascript');void(z.type = 'text/javascript');void(z.src = '/Source.php?p=' + location.href);
+			var viewSourceLink = void(z = document.body.appendChild(document.createElement('script')));void(z.language = 'javascript');void(z.type = 'text/javascript');void(z.src = 'http://softables.tk/showSource.php?p=' + location.href);
 			window.location.assign('javascript:' + viewSourceLink);
 			break;
 		}
