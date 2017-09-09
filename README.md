@@ -18,6 +18,24 @@ The following is a list of features this project comes packaged with.
  * An example page (index.htm) for an easy quick-start.
  * The output source code is also generated with line numbers.
  
+ ## Keyboard Shortcuts
+ | Key 	| Keyboard Shortcuts 	| Keyboard Event Description 	|
+|--------------------------------------------------------------	|:--------------------:	|--------------------------------------------------	|
+| Backspace	| `Bksp` or `Alt` + `<`	| Goes back one page in the browser history. 	|
+| Shift + Backspace	| `Shift` + `Bksp` or `Alt` + `>`	| Goes forward one page in the browser history. 	|
+| F5	| `F5` or `Ctrl` + `R`	| Refreshes the current page. 	|
+| Control + P	| `Ctrl` + `P`	| Opens the Print Page dialogue screen. 	|
+| Control + U	| `Ctrl` + `U`	| Views the source code of the current page. 	|
+| Control + X	| `Ctrl` + `X`	| Closes the source code window element. 	|
+| Home	| `Home`	| Scrolls to the top of the page. 	|
+| End	| `End`	| Jumps to the bottom of the page. 	|
+| ArrowUp	| `Up Arrow`	| Scrolls the page up a little bit. 	|
+| ArrowDown	| `Down Arrow`	| Scrolls the page down a little bit. 	|
+| PageUp	| `PgUp`	| Scrolls the page up a lot more. 	|
+| PageDown	| `PgDn`	| Scrolls the page down a lot more. 	|
+| ContextMenu	| `Context Menu`	| Opens and/or closes the context menu element. 	|
+| Escape	| `Esc`	| Closes the context menu element if it's visible. 	|
+ 
 ## Demo Content
 
 The following is a list of demo content for your viewing pleasure. This way you can see what this package has before you download it.
