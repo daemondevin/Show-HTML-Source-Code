@@ -23,7 +23,8 @@ The following is a list of features this project comes packaged with.
 The following is a list of demo content for your viewing pleasure. This way you can see what this package has before you download it.
  * [Context Menu (Right Click)](https://codepen.io/demondevin/pen/oYPGxb) - The right click menu looks similar to this.
  * [Code Block Snippet](https://codepen.io/demondevin/pen/pNqpQE) - The output source code looks similar to this.
- * [Softables.tk](http://softables.tk/) - Visit my website and right click to see this in action.
+ * [Example Page](http://softables.tk/extras/showsource/index) - An example webpage showing the implementation of both the context menu and the show source functionality.
+ * [Softables.tk](http://softables.tk/) - This website uses this package. Visit to see it in action on a live website.
  
 ## Screenshots
 
