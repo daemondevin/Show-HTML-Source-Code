@@ -39,10 +39,10 @@ The following is a list of features this project comes packaged with.
 ## Demo Content
 
 The following is a list of demo content for your viewing pleasure. This way you can see what this package has before you download it.
- * [Example Page](http://softables.tk/extras/showsource/index) - An example page showing the implementation of the context menu and the show source functionality.
+ * [Example Page](http://portableappz.x10.mx/extras/showsource/index) - An example page showing the implementation of the context menu and the show source functionality.
  * [Context Menu (Right Click)](https://codepen.io/demondevin/pen/oYPGxb) - The right click menu looks similar to this.
  * [Code Block Snippet](https://codepen.io/demondevin/pen/pNqpQE) - The output source code looks similar to this.
- * [Softables.tk](http://softables.tk/) - This website uses this package. Visit to see it in action on a live website.
+ * [PortableAppz.x10.mx/](http://portableappz.x10.mx/) - This website uses this package. Visit to see it in action on a live website.
  
 ## Screenshots
 
